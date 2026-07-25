@@ -6,7 +6,7 @@ def greeting():
 
 window=Tk()
 window.title("First GUI application")
-window.geometry("600x400")
+# window.geometry("600x400")
 window.resizable(True,True)
 username=StringVar()
 L1=Label(text="First GUI applicaton",font=("Arial",20,"bold"))
