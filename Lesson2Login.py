@@ -3,11 +3,17 @@ from tkinter import messagebox
 
 def login_Function():
     if user.get()=="" or password.get()=="":
-        messagebox.showerror("Blank Input","Please enter your username anfd password!")
+        messagebox.showerror("Blank Input","Please enter your username and password!")
     elif user.get()=="Ali" and password.get()=="123.123":
         messagebox.showinfo("Login Succesful","Your username and password is correct")
     else:
         messagebox.showwarning("Input passed","You have enter"+user.get()+"  "+password.get())
+
+def showhide_pass():
+    if showhide.get():
+        E2.config(show="")
+    else:
+        E2.config(show="*")
 
 
 windows=Tk()
@@ -17,6 +23,8 @@ windows.resizable(False,False)
 
 user=StringVar()
 password=StringVar()
+showhide=BooleanVar()
+
 
 L1=Label(windows,text="LOGIN",font=("Arial",18,"bold"))
 L1.pack(pady=20)
@@ -32,6 +40,9 @@ L3.pack()
 
 E2=Entry(windows,font=("Arial",14,"normal"),show="*",textvariable=password)
 E2.pack(padx=10)
+
+c1=Checkbutton(windows,text="show/hide password",command=showhide_pass,variable=showhide)
+c1.pack()
 
 Button=Button(windows,text="Log-in",font=("Arial",16,"bold"),padx=10,pady=5,command=login_Function)
 Button.pack(pady=10)
