@@ -1,6 +1,14 @@
 from tkinter import *
 from tkinter import ttk
-
+from tkinter import messagebox
+import csv
+'''
+with open("emp.csv","w",newline="") as f1:
+    csvWriter=csv.writer(f1)
+    csvWriter.writerow(["First Name","Last Name","Address","City","Gender","Education","Experience","Job Profile","Department","Skills","Basic","Allownces","Gross_Salary","Tax","Net Salary"])
+    f1.close()
+    print("File Created!")
+'''
 def submit_data():
     firstname=fname.get()
     lastname=lname.get()
@@ -12,6 +20,22 @@ def submit_data():
     jobp=job_profile.get()
     depart=department.get()
     my_skills=[]
+
+    basic_salary=int(salary.get())
+    allownces=basic_salary*0.2
+    gross_salary=(allownces+basic_salary)*12
+    if gross_salary>=1200000:
+        tax=gross_salary*0.1
+    elif gross_salary>=800000:
+        tax=gross_salary*0.08
+    elif gross_salary>=600000:
+        tax=gross_salary*0.06
+    elif gross_salary>=400000:
+        tax=gross_salary*0.04
+    else:
+        tax=0
+
+    net_salary=gross_salary-tax
 
     if skill1.get():
         my_skills.append("Python")
@@ -26,7 +50,7 @@ def submit_data():
     else:
         pass
     
-    basic=basic_salary.get()
+    basic=salary.get()
 
     EmpData=[firstname,lastname,add,g,cty,educate,exp,jobp,depart,skill1,skill2,skill3,basic]
 
@@ -40,7 +64,12 @@ def submit_data():
     print("Job Profile: ",jobp)
     print("Department: ",depart)
     print("Skills: ",my_skills)
-    print("Basic Salary: ",basic)
+    print(f"Basic: {basic_salary} \n Allownces: {allownces} \n Gross: {gross_salary} \n Tax: {tax} \n Net: {net_salary} \n")
+    with open("emp.csv","a",newline="") as f2:
+        csvWriter=csv.writer(f2)
+        csvWriter.writerow([firstname,lastname,add,g,cty,educate,exp,jobp,depart,my_skills,basic_salary,allownces,gross_salary,tax,net_salary])
+        messagebox.showinfo("Data Stored","One Recort Added To The File")
+        f2.close()
 
 root=Tk()
 root.title("Employees Job")
@@ -57,6 +86,7 @@ department=StringVar()
 skill1=BooleanVar()
 skill2=BooleanVar()
 skill3=BooleanVar()
+salary=StringVar()
 
 edu_selected=StringVar()
 education_list=["HSC","B.Com","B.Tech","BCA","B.Sc","B.E","M.Sc","MCA"]
@@ -67,10 +97,6 @@ exp_list=list(range(1,16))
 exp_selected.set(exp_list[0])
 
 
-
-
-basic_salary=StringVar()
-
 L1=Label(root,text="Employees Detail",font=("Calibri",20,"bold"))
 L1.grid(row=0,column=0,columnspan=2,padx=10,pady=10)
 
@@ -79,6 +105,12 @@ L2.grid(row=1,column=0)
 
 L3=Label(root,text="Enter Last Name: ",font=("Calibri",14,"bold"))
 L3.grid(row=1,column=1)
+
+L3=Label(root,text="Enter Address: ",font=("Calibri",14,"bold"))
+L3.grid(row=6,column=2)
+
+E1=Entry(root,font=("Calibri",14,"normal"),textvariable=address)
+E1.grid(row=7,column=2,padx=10,pady=10)
 
 E1=Entry(root,font=("Calibri",14,"normal"),textvariable=fname)
 E1.grid(row=2,column=0,padx=10,pady=10)
@@ -147,7 +179,7 @@ cb3.grid(row=12,column=2,padx=10,pady=10)
 L13=Label(root,text="Basic Salary: ",font=("Calibri",14,"bold"))
 L13.grid(row=13,columnspan=2)
 
-E9=Entry(root,font=("Calibri",14,"normal"),textvariable=basic_salary)
+E9=Entry(root,font=("Calibri",14,"normal"),textvariable=salary)
 E9.grid(row=14,columnspan=2,padx=10,pady=10)
 
 B1=Button(root,text="Submit",command=submit_data,font=("Calibri",14,"bold"),padx=15,pady=5)

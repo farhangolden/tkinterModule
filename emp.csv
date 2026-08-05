@@ -1,0 +1,28 @@
+First Name,Last Name,Address,City,Gender,Education,Experience,Job Profile,Department,Skills,Basic,Allownces,Gross_Salary,Tax,Net Salary
+Waseem,Iqbal,Islam pura,Malegaon,Male,B.Tech,3,NO,IIT,"['Python', 'JavaScript']",78000,15600,1123200,89856,1033344
+Aarav,Naik,Daregaon,Nashik,Female,BCA,6,HR Executive,HR,Java,36000,7200,518400,41472,476928
+Vivaan,Shaikh,Nayapura,Mumbai,Male,BCA,6,QA Engineer,Support,SQL,38000,7600,547200,43776,503424
+Aditya,Kulkarni,Didda Colony,Mumbai,Female,BSc CS,4,HR Executive,Support,Java,46000,9200,662400,52992,609408
+Arjun,Verma,Ammar Colony,Mumbai,Male,BCA,1,QA Engineer,IT,Python,30000,6000,432000,34560,397440
+Sai,Naik,Jafar Nagar,Mumbai,Female,BCA,2,HR Executive,IT,Excel,59000,11800,849600,67968,781632
+Ananya,Pawar,Pawar chock,Pune,Male,BCA,3,Accountant,IT,Communication,35000,7000,504000,40320,463680
+Diya,Joshi,Sailani Chock,Nagpur,Female,BTech,3,Support Engineer,IT,SQL,52000,10400,748800,59904,688896
+Isha,Khan,Bismil Colony,Mumbai,Female,BTech,2,QA Engineer,Support,Java,56000,11200,806400,64512,741888
+Neha,Khan,Azad Nagar,Kolhapur,Male,BSc CS,5,Software Developer,Support,Python,37000,7400,532800,42624,490176
+Priya,Naik,Gandhi Nagar,Kolhapur,Male,MCA,4,Data Analyst,IT,Excel,28000,5600,403200,32256,370944
+Rahul,Gupta,Muslim pura,Nashik,Male,BTech,1,Software Developer,Finance,Java,55000,11000,792000,63360,728640
+Karan,Patel,Muslim pura,Nagpur,Male,BCA,1,HR Executive,Support,Excel,68000,13600,979200,78336,900864
+Sneha,Shaikh,Gandhi Nagar,Nashik,Female,MCA,4,Accountant,Support,Python,55000,11000,792000,63360,728640
+Pooja,Sharma,Address 15,Pune,Female,BTech,1,Support Engineer,IT,Communication,54000,10800,777600,62208,715392
+Rohan,Kulkarni,Islam pura,Pune,Female,BSc CS,1,HR Executive,Support,Communication,69000,13800,993600,79488,914112
+Meera,Das,Didda Colony,Kolhapur,Female,BTech,1,Software Developer,Finance,Excel,43000,8600,619200,49536,569664
+Nikhil,Joshi,Daregaon,Nashik,Male,BCA,3,QA Engineer,Finance,Excel,67000,13400,964800,77184,887616
+Aisha,Singh,Ammar Colony,Kolhapur,Female,BCA,8,QA Engineer,Finance,Java,43000,8600,619200,49536,569664
+Kabir,Kulkarni,Jafar Nagar,Nashik,Male,MCA,2,Support Engineer,HR,Excel,52000,10400,748800,59904,688896
+Riya,Verma,Pawar chock,Mumbai,Female,BSc CS,4,Software Developer,IT,Java,29000,5800,417600,33408,384192
+Yash,Shaikh,Sailani Chock,Kolhapur,Male,BCA,8,Accountant,IT,Java,32000,6400,460800,36864,423936
+Tanvi,Joshi,Azad Nagar,Mumbai,Female,BCA,2,Data Analyst,IT,Testing,44000,8800,633600,50688,582912
+Om,Das,Gandhi Nagar,Kolhapur,Male,BSc CS,4,Software Developer,Finance,SQL,63000,12600,907200,72576,834624
+Sana,Verma,Nayapura,Nashik,Male,BTech,7,Software Developer,Support,Python,60000,12000,864000,69120,794880
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
